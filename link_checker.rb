@@ -5,6 +5,7 @@ require_relative 'page'
 require_relative 'report_generator'
 
 
+
 class LinkChecker
 
   #@url = 'http://getbootstrap.com/'
@@ -44,12 +45,14 @@ class LinkChecker
 
 end
 
+
+Page.new.read_config
 lc = LinkChecker.new()
-all_links = lc.find_links_on_page('http://getbootstrap.com/')
+all_links = lc.find_links_on_page($url)
 all_resp = lc.get_response_code(all_links)
 report = ReportGenerator.new()
 
-#report.show_verified_link(all_resp)
+report.show_verified_link(all_resp)
 report.show_broken_links(all_resp)
 
 
