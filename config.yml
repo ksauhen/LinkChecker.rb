@@ -1,0 +1,6 @@
+main_page_url: http://getbootstrap.com
+url: http://getbootstrap.com/
+exclude_links:
+  - mailto
+  - skype
+  - /#
